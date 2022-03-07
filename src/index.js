@@ -1,5 +1,6 @@
 import {mainPage} from './mainpage.js';
 import {menuPage} from './menupage.js';
+import {contactPage} from './contactpage.js';
 
 const createSideBar = (() => {
     const sideBar = document.createElement('div');
@@ -10,18 +11,21 @@ const createSideBar = (() => {
     return {navigation};
 })();
 
-function menuCreator(name, func) {
-    const menuLink = document.createElement('li');
-    menuLink.textContent = name;
-    menuLink.addEventListener('click', () => {
+function navCreator(name, func) {
+    const navLink = document.createElement('li');
+    navLink.textContent = name;
+    navLink.addEventListener('click', () => {
         const contentDiv = document.getElementById('content');
         contentDiv.removeChild(contentDiv.lastChild);
         func();
     })
-    createSideBar.navigation.appendChild(menuLink);
+    createSideBar.navigation.appendChild(navLink);
 }
 
-menuCreator('Home', mainPage);
-menuCreator('Menu', menuPage);
+navCreator('Home', mainPage);
+navCreator('Menu', menuPage);
+navCreator('Visit Us', contactPage);
 mainPage();
+
+
 
