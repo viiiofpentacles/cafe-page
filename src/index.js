@@ -1,6 +1,7 @@
 import {mainPage} from './mainpage.js';
 import {menuPage} from './menupage.js';
 import {contactPage} from './contactpage.js';
+import './style.css';
 
 const createSideBar = (() => {
     const sideBar = document.createElement('div');
