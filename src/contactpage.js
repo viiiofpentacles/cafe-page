@@ -4,29 +4,22 @@ function contactPage() {
     const contactHeader = document.createElement('h1');
     contactHeader.textContent = 'Visit Us';
     contactContent.appendChild(contactHeader);
-
-    const fontCredits = document.createElement('div');
-    fontCredits.textContent = `Fonts from `;
-    const fontCreditsLink = document.createElement('a');
-    fontCreditsLink.setAttribute('href', `https://fonts.google.com/`);
-    fontCreditsLink.textContent = 'Google Fonts';
-    fontCreditsLink.style.textDecoration = 'none';
-    fontCreditsLink.style.color = 'rgb(199, 110, 110)'
-    fontCredits.appendChild(fontCreditsLink);
-
-    const imageCredits = document.createElement('div');
-    imageCredits.textContent = `Images from `;
-    const imageCreditsLink = document.createElement('a');
-    imageCreditsLink.setAttribute('href', `https://www.freepik.com/`);
-    imageCreditsLink.textContent = 'freepik';
-    imageCreditsLink.style.textDecoration = 'none';
-    imageCreditsLink.style.color = 'rgb(199, 110, 110)'
-    imageCredits.appendChild(imageCreditsLink);
-
-    contactContent.appendChild(fontCredits);
-    contactContent.appendChild(imageCredits);
-
+    
     document.getElementById('content').appendChild(contactContent);
 };
 
-export {contactPage};
+function creditsInserter (item, sourceName, link) {
+    const creditsHolder = document.createElement('div');
+    creditsHolder.textContent = `${item} from `;
+    const creditsLink = document.createElement('a');
+    creditsLink.setAttribute('href', link);
+    creditsLink.textContent = sourceName;
+    creditsLink.style.textDecoration = 'none';
+    creditsLink.style.color = 'rgb(199, 110, 110)'
+    creditsHolder.appendChild(creditsLink);
+
+    const contactContent = document.getElementById('contact-page');
+    contactContent.appendChild(creditsHolder);
+}
+
+export {contactPage, creditsInserter};

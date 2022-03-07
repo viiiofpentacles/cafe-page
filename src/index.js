@@ -1,6 +1,6 @@
 import {mainPage} from './mainpage.js';
 import {menuPage, addMenuItem} from './menupage.js';
-import {contactPage} from './contactpage.js';
+import {contactPage, creditsInserter} from './contactpage.js';
 import './style.css';
 import homeImage from './images/amphora.png';
 import menuImage from './images/amphora(1).png';
@@ -52,6 +52,8 @@ navCreator('Menu', () => {
 );
 navCreator('Visit Us', () => {
         contactPage();
+        creditsInserter('Fonts', 'Google Fonts', 'https://fonts.google.com/');
+        creditsInserter('Images', 'freepik', 'https://www.freepik.com/');
         imageInserter('contact-page', contactImage);
     }
 );
