@@ -3,9 +3,11 @@ import {menuPage} from './menupage.js';
 import {contactPage} from './contactpage.js';
 import './style.css';
 
+
 const createSideBar = (() => {
     const sideBar = document.createElement('div');
     sideBar.id = 'sidebar';
+    
     const navigation = document.createElement('ul');
     sideBar.appendChild(navigation);
     document.getElementById('content').appendChild(sideBar);

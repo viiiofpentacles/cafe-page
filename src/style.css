@@ -47,13 +47,27 @@ h1 {
     padding-bottom: 1rem;
 }
 
+ul::before {
+    content: '';
+    display: block;
+    background: url(./images/shen-ring.png) no-repeat;
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    margin: 0 2rem;
+    padding-bottom: 1rem;
+}
+
 ul {
     list-style-type: none;
     color:var(--text-default);
+    padding-top: 0.5rem;
 }
 
 li {
     padding-bottom: 0.5rem;
+    text-align: center;
+    padding-right: 5rem;
 }
 
 li:hover {
