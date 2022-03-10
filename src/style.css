@@ -37,6 +37,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     overflow: auto;
+
 }
 
 h1 {
@@ -74,4 +75,3 @@ li:hover {
     cursor: pointer;
     color: var(--text-hover);
 };
-
